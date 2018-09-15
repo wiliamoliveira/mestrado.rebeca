@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" jaxb:version="1.0">
+	<xs:element name="config">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="r" type="xs:double" minOccurs="1" maxOccurs="1" />
+				<xs:element name="sigma" type="xs:double" minOccurs="1" maxOccurs="1" />
+				<xs:element name="sigmaE" type="xs:double" minOccurs="1" maxOccurs="1" />
+				<xs:element name="miE" type="xs:double" minOccurs="1" maxOccurs="1" />
+				<xs:element name="convYield" type="xs:double" minOccurs="1" maxOccurs="1" />
+				<xs:element name="velRev" type="xs:double" minOccurs="1" maxOccurs="1" />
+				<xs:element name="T" type="xs:double" minOccurs="1" maxOccurs="1" />
+				<xs:element name="c1" type="xs:double" minOccurs="1" maxOccurs="1" />
+				<xs:element name="c2" type="xs:double" minOccurs="1" maxOccurs="1" />
+				<xs:element name="tau" type="xs:double" minOccurs="1" maxOccurs="1" />
+				<!-- <xs:element name="q" type="xs:double" minOccurs="1" maxOccurs="1" /> -->
+				<xs:element name="accuracy" type="xs:double" minOccurs="1" maxOccurs="1" />
+				<xs:element name="P0" type="xs:double" minOccurs="1" maxOccurs="1" />
+				<xs:element name="Pmax" type="xs:double" minOccurs="1" maxOccurs="1" />
+				<xs:element name="E0" type="xs:double" minOccurs="1" maxOccurs="1" />
+				<xs:element name="Emin" type="xs:double" minOccurs="1" maxOccurs="1" />
+				<xs:element name="Ebarra" type="xs:double" minOccurs="1" maxOccurs="1" />
+				<xs:element name="qMax" type="xs:double" minOccurs="1" maxOccurs="1" />
+				<xs:element name="timeInMonth" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+				<xs:element name="growthRate" type="xs:double" minOccurs="1" maxOccurs="1" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
+   

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="689.0" prefWidth="724.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.puc.mestrado.rebeca.gui.MainController">
+   <children>
+      <Button fx:id="btnCalculate" layoutX="586.0" layoutY="309.0" mnemonicParsing="false" onAction="#calculate" prefHeight="27.0" prefWidth="89.0" text="Calculate" AnchorPane.rightAnchor="26.0" />
+      <Button fx:id="btnClose" layoutX="452.0" layoutY="646.0" mnemonicParsing="false" onAction="#close" prefHeight="17.0" prefWidth="112.0" text="Close" AnchorPane.rightAnchor="15.0" />
+      <MenuBar fx:id="menuBar">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#close" text="Close" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Configuration">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#save" text="Save" />
+                  <MenuItem mnemonicParsing="false" onAction="#load" text="Load" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Variables">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#calculate" text="Calculate" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Generate F">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#browse" text="Browse" />
+                  <MenuItem mnemonicParsing="false" onAction="#openExcel" text="Open Excel" />
+                  <MenuItem mnemonicParsing="false" onAction="#run" text="Run" />
+              </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#about" text="About" />
+               </items></Menu>
+        </menus>
+      </MenuBar>
+      <Separator layoutX="5.0" layoutY="52.0" prefHeight="6.0" prefWidth="428.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="52.0" />
+      <Label layoutX="14.0" layoutY="35.0" prefHeight="17.0" prefWidth="163.0" text="Configuration">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="14.0" layoutY="66.0" prefHeight="17.0" prefWidth="70.0" text="sigmaE:" textAlignment="RIGHT" />
+      <TextField fx:id="txtSigmaE" layoutX="86.0" layoutY="61.0" prefHeight="27.0" prefWidth="89.0" />
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="14.0" layoutY="96.0" prefHeight="17.0" prefWidth="70.0" text="sigma:" textAlignment="RIGHT" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="640.0" />
+      <TextField fx:id="txtSigma" layoutX="86.0" layoutY="91.0" prefHeight="27.0" prefWidth="89.0" />
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="14.0" layoutY="126.0" prefHeight="17.0" prefWidth="70.0" text="convYield:" textAlignment="RIGHT" />
+      <TextField fx:id="txtConvYield" layoutX="86.0" layoutY="121.0" prefHeight="27.0" prefWidth="89.0" />
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="14.0" layoutY="156.0" prefHeight="17.0" prefWidth="70.0" text="velRev:" textAlignment="RIGHT" />
+      <TextField fx:id="txtVelRev" layoutX="86.0" layoutY="151.0" prefHeight="27.0" prefWidth="89.0" />
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="14.0" layoutY="216.0" prefHeight="17.0" prefWidth="70.0" text="T:" textAlignment="RIGHT" />
+      <TextField fx:id="txtT" layoutX="86.0" layoutY="211.0" prefHeight="27.0" prefWidth="89.0" AnchorPane.leftAnchor="86.0" />
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="180.0" layoutY="66.0" prefHeight="17.0" prefWidth="70.0" text="c1:" textAlignment="RIGHT" />
+      <TextField fx:id="txtC1" layoutX="252.0" layoutY="61.0" prefHeight="27.0" prefWidth="89.0" />
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="180.0" layoutY="96.0" prefHeight="17.0" prefWidth="70.0" text="c2:" textAlignment="RIGHT" />
+      <TextField fx:id="txtC2" layoutX="252.0" layoutY="91.0" prefHeight="27.0" prefWidth="89.0" />
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="180.0" layoutY="126.0" prefHeight="17.0" prefWidth="70.0" text="tau:" textAlignment="RIGHT" />
+      <TextField fx:id="txtTau" layoutX="252.0" layoutY="121.0" prefHeight="27.0" prefWidth="89.0" />
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="299.0" layoutY="404.0" prefHeight="17.0" prefWidth="70.0" text="q:" textAlignment="RIGHT" />
+      <TextField fx:id="txtQ" editable="false" layoutX="371.0" layoutY="399.0" prefHeight="27.0" prefWidth="163.0" />
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="180.0" layoutY="156.0" prefHeight="17.0" prefWidth="70.0" text="accuracy" textAlignment="RIGHT" />
+      <TextField fx:id="txtAccuracy" layoutX="252.0" layoutY="151.0" prefHeight="27.0" prefWidth="89.0" />
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="345.0" layoutY="68.0" prefHeight="17.0" prefWidth="70.0" text="P0:" textAlignment="RIGHT" />
+      <TextField fx:id="txtP0" layoutX="417.0" layoutY="63.0" prefHeight="27.0" prefWidth="89.0" />
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="345.0" layoutY="98.0" prefHeight="17.0" prefWidth="70.0" text="Pmax:" textAlignment="RIGHT" />
+      <TextField fx:id="txtPmax" layoutX="417.0" layoutY="93.0" prefHeight="27.0" prefWidth="89.0" />
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="345.0" layoutY="128.0" prefHeight="17.0" prefWidth="70.0" text="E0:" textAlignment="RIGHT" />
+      <TextField fx:id="txtE0" layoutX="417.0" layoutY="123.0" prefHeight="27.0" prefWidth="89.0" />
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="345.0" layoutY="158.0" prefHeight="17.0" prefWidth="70.0" text="Emin:" textAlignment="RIGHT" />
+      <TextField fx:id="txtEmin" layoutX="417.0" layoutY="153.0" prefHeight="27.0" prefWidth="89.0" />
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="345.0" layoutY="188.0" prefHeight="17.0" prefWidth="70.0" text="Ebarra:" textAlignment="RIGHT" />
+      <TextField fx:id="txtEbarra" layoutX="417.0" layoutY="183.0" prefHeight="27.0" prefWidth="89.0" />
+      <Separator layoutX="5.0" layoutY="299.0" prefHeight="6.0" prefWidth="714.0" AnchorPane.bottomAnchor="384.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="299.0" />
+      <Label layoutX="14.0" layoutY="281.0" prefHeight="17.0" prefWidth="163.0" text="Variables">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="16.0" layoutY="314.0" prefHeight="17.0" prefWidth="70.0" text="detalP:" textAlignment="RIGHT" />
+      <TextField fx:id="txtDeltaP" layoutX="88.0" layoutY="309.0" prefHeight="27.0" prefWidth="163.0" />
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="16.0" layoutY="344.0" prefHeight="17.0" prefWidth="70.0" text="detalE:" textAlignment="RIGHT" />
+      <TextField fx:id="txtDeltaE" layoutX="88.0" layoutY="339.0" prefHeight="27.0" prefWidth="163.0" />
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="16.0" layoutY="374.0" prefHeight="17.0" prefWidth="70.0" text="detalT:" textAlignment="RIGHT" />
+      <TextField fx:id="txtDeltaT" layoutX="88.0" layoutY="369.0" prefHeight="27.0" prefWidth="163.0" />
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="16.0" layoutY="404.0" prefHeight="17.0" prefWidth="70.0" text="df:" textAlignment="RIGHT" />
+      <TextField fx:id="txtDf" editable="false" layoutX="88.0" layoutY="399.0" prefHeight="27.0" prefWidth="163.0" />
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="298.0" layoutY="314.0" prefHeight="17.0" prefWidth="72.0" text="max step P:" textAlignment="RIGHT" />
+      <TextField fx:id="txtMaxStepP" layoutX="371.0" layoutY="309.0" prefHeight="27.0" prefWidth="163.0" />
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="299.0" layoutY="344.0" prefHeight="17.0" prefWidth="72.0" text="max step E:" textAlignment="RIGHT" />
+      <TextField fx:id="txtMaxStepE" layoutX="371.0" layoutY="339.0" prefHeight="27.0" prefWidth="163.0" />
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="299.0" layoutY="374.0" prefHeight="17.0" prefWidth="72.0" text="max step T:" textAlignment="RIGHT" />
+      <TextField fx:id="txtMaxStepT" layoutX="371.0" layoutY="369.0" prefHeight="27.0" prefWidth="163.0" />
+      <Button fx:id="btnRun" layoutX="513.0" layoutY="509.0" mnemonicParsing="false" onAction="#run" prefHeight="27.0" prefWidth="89.0" text="Run" AnchorPane.bottomAnchor="153.0" AnchorPane.leftAnchor="513.0" AnchorPane.rightAnchor="122.0" />
+      <Separator layoutX="8.0" layoutY="463.0" prefHeight="6.0" prefWidth="428.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="5.0" />
+      <Label layoutX="17.0" layoutY="446.0" prefHeight="17.0" prefWidth="163.0" text="Generate F">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="15.0" layoutY="293.0" prefHeight="17.0" prefWidth="70.0" text="Config File:" textAlignment="RIGHT" AnchorPane.bottomAnchor="427.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="494.0" AnchorPane.topAnchor="293.0" />
+      <TextField fx:id="txtConfigFile" editable="false" layoutX="86.0" layoutY="244.0" prefHeight="27.0" prefWidth="419.0" AnchorPane.leftAnchor="86.0" AnchorPane.rightAnchor="219.0" />
+      <Button fx:id="btnSave" layoutX="513.0" layoutY="244.0" mnemonicParsing="false" onAction="#save" prefHeight="27.0" prefWidth="89.0" text="Save" AnchorPane.leftAnchor="513.0" AnchorPane.rightAnchor="122.0" />
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="13.0" layoutY="482.0" prefHeight="17.0" prefWidth="70.0" text="Excel file:" textAlignment="RIGHT" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="641.0" />
+      <TextField fx:id="txtExcelFile" editable="false" layoutX="86.0" layoutY="477.0" prefHeight="27.0" prefWidth="419.0" AnchorPane.leftAnchor="86.0" AnchorPane.rightAnchor="219.0" />
+      <Button fx:id="btnBrowse" layoutX="513.0" layoutY="477.0" mnemonicParsing="false" onAction="#browse" prefHeight="27.0" prefWidth="89.0" text="Browse" AnchorPane.bottomAnchor="185.0" AnchorPane.leftAnchor="513.0" AnchorPane.rightAnchor="122.0" />
+      <Button fx:id="btnLoad" layoutX="609.0" layoutY="244.0" mnemonicParsing="false" onAction="#load" prefHeight="27.0" prefWidth="89.0" text="Load" AnchorPane.leftAnchor="609.0" AnchorPane.rightAnchor="26.0" />
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="13.0" layoutY="513.0" prefHeight="17.0" prefWidth="70.0" text="NPV:" textAlignment="RIGHT" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="641.0" />
+      <TextField fx:id="txtVPL" editable="false" layoutX="87.0" layoutY="508.0" prefHeight="27.0" prefWidth="267.0" AnchorPane.leftAnchor="87.0" />
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="8.0" layoutY="544.0" prefHeight="17.0" prefWidth="79.0" text="F(P0,E0,t0):" textAlignment="RIGHT" />
+      <TextField fx:id="txtFP0E0t0" editable="false" layoutX="87.0" layoutY="539.0" prefHeight="27.0" prefWidth="267.0" />
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="510.0" layoutY="68.0" prefHeight="17.0" prefWidth="70.0" text="r:" textAlignment="RIGHT" />
+      <TextField fx:id="txtR" layoutX="582.0" layoutY="63.0" prefHeight="27.0" prefWidth="89.0" />
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="180.0" layoutY="186.0" prefHeight="17.0" prefWidth="70.0" text="miE" textAlignment="RIGHT" />
+      <TextField fx:id="txtMiE" layoutX="252.0" layoutY="181.0" prefHeight="27.0" prefWidth="89.0" />
+      <RadioButton fx:id="rdbDeterministico" layoutX="24.0" layoutY="576.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="128.0" text="Deterministico">
+         <toggleGroup>
+            <ToggleGroup fx:id="tgRunningMetthod" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="rdbEstocasticoKatia" layoutX="24.0" layoutY="601.0" mnemonicParsing="false" selected="false" text="Estocastico Katia" toggleGroup="$tgRunningMetthod" />
+      <CheckBox fx:id="chbPrintF" layoutX="364.0" layoutY="513.0" mnemonicParsing="false" text="Print F" />
+      <ProgressBar fx:id="pgbProgress" layoutX="15.0" layoutY="627.0" prefHeight="20.0" prefWidth="492.0" progress="0.0" />
+      <Button fx:id="btnOpen" layoutX="609.0" layoutY="477.0" mnemonicParsing="false" onAction="#openExcel" prefHeight="27.0" prefWidth="89.0" text="Open" />
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="510.0" layoutY="128.0" prefHeight="17.0" prefWidth="70.0" text="qMax" textAlignment="RIGHT" />
+      <TextField fx:id="txtQMax" layoutX="582.0" layoutY="123.0" prefHeight="27.0" prefWidth="89.0" />
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="510.0" layoutY="158.0" prefHeight="17.0" prefWidth="70.0" text="alfa:" textAlignment="RIGHT" />
+      <TextField fx:id="txtAlfa" layoutX="582.0" layoutY="153.0" prefHeight="27.0" prefWidth="89.0" />
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="510.0" layoutY="98.0" prefHeight="17.0" prefWidth="70.0" text="cc" textAlignment="RIGHT" />
+      <Label fx:id="lblProgress" layoutX="21.0" layoutY="651.0" prefHeight="17.0" prefWidth="389.0" />
+      <TextField fx:id="txtCc" layoutX="582.0" layoutY="93.0" prefHeight="27.0" prefWidth="89.0" />
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="510.0" layoutY="188.0" prefHeight="17.0" prefWidth="70.0" text="dfe:" textAlignment="RIGHT" />
+      <TextField fx:id="txtDfe" layoutX="582.0" layoutY="183.0" prefHeight="27.0" prefWidth="89.0" />
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="13.0" layoutY="249.0" prefHeight="17.0" prefWidth="70.0" text="Config file:" textAlignment="RIGHT" />
+      <RadioButton fx:id="rdbDeterministicoSemCortes" layoutX="180.0" layoutY="576.0" mnemonicParsing="false" text="Deterministico sem cortes" toggleGroup="$tgRunningMetthod" />
+      <RadioButton fx:id="rdbEstocasticoComCortes" layoutX="380.0" layoutY="601.0" mnemonicParsing="false" text="Estocastico com cortes" toggleGroup="$tgRunningMetthod" />
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="14.0" layoutY="186.0" prefHeight="17.0" prefWidth="70.0" text="Emax:" textAlignment="RIGHT" />
+      <TextField fx:id="txtEmax" layoutX="86.0" layoutY="181.0" prefHeight="27.0" prefWidth="89.0" />
+      <RadioButton fx:id="rdbDeterministicoComCortes" layoutX="380.0" layoutY="576.0" mnemonicParsing="false" text="Deterministico com cortes" toggleGroup="$tgRunningMetthod" />
+      <RadioButton fx:id="rdbEstocasticoMorck" layoutX="180.0" layoutY="601.0" mnemonicParsing="false" selected="true" text="Estocastico Morck" toggleGroup="$tgRunningMetthod" />
+      <CheckBox fx:id="chbMonth" layoutX="197.0" layoutY="216.0" mnemonicParsing="false" text="Month" />
+   </children>
+</AnchorPane>

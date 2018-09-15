@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><config><r>0.05</r><sigma>0.19</sigma><sigmaE>0.0</sigmaE><miE>0.017</miE><convYield>0.046</convYield><velRev>4.0E-4</velRev><T>2.0</T><cf>0.0</cf><cv>30.0</cv><tau>0.33</tau><accuracy>30.0</accuracy><P0>70.0</P0><Pmax>100.0</Pmax><E0>500.0</E0><Emin>30.0</Emin><Ebarra>600.0</Ebarra></config>

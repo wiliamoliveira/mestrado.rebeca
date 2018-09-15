@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<config>
+	<r>0.05</r>
+	<sigma>0.104</sigma>
+	<sigmaE>0.93</sigmaE>
+	<miE>0.17</miE>
+	<convYield>0.046</convYield>
+	<velRev>5.0E-4</velRev>
+	<T>30</T>
+	<cf>0.0</cf>
+	<cv>33.8</cv>
+	<tau>0.33</tau>
+	<accuracy>5</accuracy>
+	<P0>62.0</P0>
+	<Pmax>200.0</Pmax>
+	<E0>60</E0>
+	<Emin>50.0</Emin>
+	<Ebarra>600.0</Ebarra>
+</config>

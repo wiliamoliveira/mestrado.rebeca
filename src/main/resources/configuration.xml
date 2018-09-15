@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="configuration.xsd">
+	<r>0.05</r>
+	<sigma>0.19</sigma>
+	<sigmaE>0.1</sigmaE>
+	<miE>0.04</miE>
+	<convYield>0.046</convYield>
+	<velRev>4.0E-4</velRev>
+	<T>10.0</T>
+	<c1>20.0</c1>
+	<c2>30.0</c2>
+	<tau>0.33</tau>
+	<accuracy>5</accuracy>
+	<P0>75.0</P0>
+	<Pmax>200.0</Pmax>
+	<E0>80.0</E0>
+	<Emin>30.0</Emin>
+	<Ebarra>600.0</Ebarra>
+	<qMax>0.0</qMax>
+	<timeInMonth>true</timeInMonth>
+	<growthRate>0.017</growthRate>
+</config>

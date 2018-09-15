@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="225.0" prefWidth="473.0" stylesheets="@Main.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.puc.mestrado.rebeca.gui.AboutController">
+   <children>
+      <Button fx:id="btnAboutClose" layoutX="347.0" layoutY="184.0" mnemonicParsing="false" onAction="#aboutClose" prefHeight="17.0" prefWidth="112.0" text="Close" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="347.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="184.0" />
+      <ImageView fx:id="imgRebeca" fitHeight="136.0" fitWidth="180.0" layoutX="279.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="76.0" AnchorPane.leftAnchor="279.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+         <image>
+            <Image url="@about.jpg" />
+         </image>
+      </ImageView>
+      <TextArea fx:id="txtAreaAbout" editable="false" layoutX="14.0" layoutY="14.0" prefHeight="195.0" prefWidth="243.0" text="Projeto de Mestrado Rebeca Ramos de Oliveira Figueiredo" wrapText="true" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="216.0" AnchorPane.topAnchor="14.0" />
+   </children>
+</AnchorPane>
